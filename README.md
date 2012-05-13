@@ -44,6 +44,7 @@ Return a string with the image rendered for terminal x256 colors.
 Install
 =======
 
+    pip install -e git://github.com/magarcia/python-x256.git#egg=x256
     python setup.py install
 
 
