@@ -19,7 +19,7 @@ setup(name = "pycture-tube",
     packages = ["pycture-tube"],
     platforms = ["POSIX", "Windows"],
     long_description = open(os.path.join(HERE, "README.md"), "r").read(),
-    install_requires=["Twisted", "x256"],
+    install_requires=["Twisted"],
     classifiers = [
         "Development Status :: 4 - Beta",
         "License :: OSI Approved :: MIT License",
