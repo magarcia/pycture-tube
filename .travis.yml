@@ -1,0 +1,9 @@
+language: python
+python:
+    - 2.5
+    - 2.6
+    - 2.7
+
+before_script: pip install -e git://github.com/magarcia/python-x256.git#egg=x256
+install: python setup.py install
+script: trial pycture-tube
