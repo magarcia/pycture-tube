@@ -5,5 +5,9 @@ python:
     - 2.7
 
 before_script: pip install -e git://github.com/magarcia/python-x256.git#egg=x256
-install: python setup.py install
+install: 
+ - sudo apt-get install zlib1g zlib1g-dev
+ - sudo ln -s /usr/lib/i386-linux-gnu/libz.so /usr/lib/
+ - pip install PIL --use-mirrors ; true
+ - python setup.py install
 script: trial pycture-tube
