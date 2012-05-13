@@ -14,5 +14,5 @@ class TestPyctureTube(unittest.TestCase):
         self.rendered = open(os.path.join(HERE, 'octocat.txt')).read()
 
     def test_renderify(self):
-        img = pycturetube.renderify(os.path.join(HERE, 'octocat.png'))
+        img = pycturetube.renderify('https://github.com/magarcia/pycture-tube/raw/master/pycture-tube/octocat.png')
         self.assertEqual(self.rendered, img)
