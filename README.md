@@ -1,5 +1,4 @@
-[![Build Status](https://secure.travis-ci.org/magarcia/pycture-tube.png?branch=master)](http://travis-ci.org/magarcia/pycture-tube)
-Picture-tube
+Pycture-tube [![Build Status](https://secure.travis-ci.org/magarcia/pycture-tube.png?branch=master)](http://travis-ci.org/magarcia/pycture-tube)
 ============
 
 *This is a python version from [picture-tube](https://github.com/substack/picture-tube)*
