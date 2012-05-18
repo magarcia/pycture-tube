@@ -2,6 +2,7 @@
 import os
 import sys
 
+kw = {}
 if sys.version < '3':
     kw = {"install_requires": ["PIL"]}
 
