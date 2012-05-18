@@ -6,11 +6,10 @@ python:
     - 3.1
     - 3.2
 
-before_script:
-    - if [ `python -c "import sys; print(sys.version > '3')"` = "True" ]; then pip install -e git+git://github.com/sloonz/pil-py3k.git#egg=PIL; fi
-    - pip install -e git://github.com/magarcia/python-x256.git#egg=x256
 install: 
     - sudo apt-get install zlib1g zlib1g-dev
     - sudo ln -s /usr/lib/i386-linux-gnu/libz.so /usr/lib/
+    - if [ `python -c "import sys; print(sys.version > '3')"` = "True" ]; then pip install -e git+git://github.com/sloonz/pil-py3k.git#egg=PIL; fi
+    - pip install -e git://github.com/magarcia/python-x256.git#egg=x256
     - python setup.py install
 script: python tests/runall.py
