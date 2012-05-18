@@ -44,9 +44,14 @@ Return a string with the image rendered for terminal x256 colors.
 Install
 =======
 
-    pip install -e git://github.com/magarcia/python-x256.git#egg=x256
+    pip install -e git+git://github.com/magarcia/python-x256.git#egg=x256
     python setup.py install
 
+In Python 3
+
+    pip install -e git+git://github.com/sloonz/pil-py3k.git#egg=PIL
+    pip install -e git+git://github.com/magarcia/python-x256.git#egg=x256
+    python setup.py install
 
 License
 =======

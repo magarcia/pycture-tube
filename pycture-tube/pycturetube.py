@@ -2,12 +2,18 @@
 
 from x256 import x256
 from optparse import OptionParser
-import urllib
 import Image
-try:
-    import cStringIO as StringIO
-except ImportError:
-    import StringIO
+import sys
+
+if sys.version > '3':
+    from io import BytesIO as StringIO
+    import urllib.request as urllib
+else:
+    import urllib
+    try:
+        from cStringIO import StringIO
+    except ImportError:
+        from StringIO import StringIO
 
 
 def renderify(filename, cols=80):
@@ -15,10 +21,10 @@ def renderify(filename, cols=80):
     Render images on the terminal with xterm 256 colors.
     """
     try:
-        f = urllib.urlopen(filename)
-        im = StringIO.StringIO(f.read())
+        url = urllib.urlopen(filename)
+        im = StringIO(url.read())
         im = Image.open(im)
-        f.close()
+        url.close()
     except:
         im = Image.open(filename)
 
@@ -55,4 +61,4 @@ if __name__ == "__main__":
 
     if len(args) >= 1:
         for i in args:
-            print renderify(i, options.cols)
+            print(renderify(i, options.cols))

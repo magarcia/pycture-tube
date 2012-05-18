@@ -3,11 +3,13 @@ python:
     - 2.5
     - 2.6
     - 2.7
+    - 3.1
+    - 3.2
 
-before_script: pip install -e git://github.com/magarcia/python-x256.git#egg=x256
+before_script:
+    - pip install -e git://github.com/magarcia/python-x256.git#egg=x256
 install: 
- - sudo apt-get install zlib1g zlib1g-dev
- - sudo ln -s /usr/lib/i386-linux-gnu/libz.so /usr/lib/
- - pip install PIL --use-mirrors ; true
- - python setup.py install
-script: trial pycture-tube
+    - sudo apt-get install zlib1g zlib1g-dev
+    - sudo ln -s /usr/lib/i386-linux-gnu/libz.so /usr/lib/
+    - python setup.py install
+script: python tests/runall.py
