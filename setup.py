@@ -2,9 +2,7 @@
 import os
 import sys
 
-if sys.version > '3':
-    kw = {"dependency_links": ["http://github.com/sloonz/pil-py3k/tarball/master#egg=PIL"]}
-else:
+if sys.version < '3':
     kw = {"install_requires": ["PIL"]}
 
 try:
